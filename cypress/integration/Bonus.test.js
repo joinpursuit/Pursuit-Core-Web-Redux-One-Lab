@@ -1,6 +1,6 @@
 describe("App", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3001");
+    cy.visit("http://localhost:3000");
   });
 
   it("increases and decreases count", () => {
@@ -26,8 +26,8 @@ describe("App", () => {
   });
 
   it("increments count by a custom amount", () => {
-      cy.get("input").clear().type("123");
-      cy.get("button").contains("+ by").click()
-      cy.contains("count: 123");
+    cy.get("input").clear().type("123");
+    cy.get("button").contains("+ by").click();
+    cy.contains("count: 123");
   });
 });
