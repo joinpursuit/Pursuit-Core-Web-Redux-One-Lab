@@ -6,9 +6,11 @@ import "./App.css";
 import Counter from "./components/Counter";
 import rootReducer from "./reducers";
 
+const store = createStore(rootReducer, devToolsEnhancer())
+
 function App() {
   return (
-    <Provider store={createStore(rootReducer, devToolsEnhancer())}>
+    <Provider store={store}>
       <div className="app">
         <Counter />
       </div>
