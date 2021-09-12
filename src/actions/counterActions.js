@@ -12,8 +12,8 @@ export const reset = () =>{
   return {type: RESET} 
 }
 
-export const incrementBY = () =>{
-  return {type: INCREMENT_BY}
+export const incrementBY = (amount) =>{
+  return {type: INCREMENT_BY, amount}
 }
 
 export const incrementIfEven = () =>{
