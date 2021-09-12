@@ -1,4 +1,10 @@
-import { DECREMENT, INCREMENT,  } from "./actionTypes";
+import {
+  DECREMENT,
+  INCREMENT,
+  RESET,
+  INCREMENT_IF_EVEN,
+  INCREMENT_BY,
+} from "./actionTypes";
 
 export const decrementCount = () => {
   return { type: DECREMENT };
@@ -6,4 +12,19 @@ export const decrementCount = () => {
 
 export const incrementCount = () => {
   return { type: INCREMENT };
+};
+
+export const resetCount = () => {
+  return { type: RESET };
+};
+
+export const evenCount = () => {
+  return { type: INCREMENT_IF_EVEN };
+};
+
+export const inputCounter = (number) => {
+  return {
+    type: INCREMENT_BY,
+    amount: number,
+  };
 };
