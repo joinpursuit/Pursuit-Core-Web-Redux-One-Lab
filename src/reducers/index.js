@@ -7,7 +7,7 @@ const rootReducer = combineReducers({
 	incrementCount: countReducer,
 	resetCount: countReducer,
 	evenCount: countReducer,
-	incrementByCount: countReducer,
+	incrementBy: countReducer,
 });
 
 export default rootReducer;

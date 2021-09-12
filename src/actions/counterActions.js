@@ -22,9 +22,9 @@ export const evenCount = () => {
 	return { type: INCREMENT_IF_EVEN };
 };
 
-export const incrementByCount = (number) => {
+export const incrementBy = (number) => {
 	return {
 		type: INCREMENT_BY,
-		payload: number,
+		amount: number,
 	};
 };
