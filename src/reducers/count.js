@@ -13,7 +13,7 @@ export default function reduceCount(state = 0, action) {
     case DECREMENT:
       return state - 1;
     case INCREMENT_BY:
-      return state + action.amount;
+      return state + Number(action.amount);
     case INCREMENT_IF_EVEN:
       return state % 2 === 0 ? state + 1 : state;
     case RESET:
