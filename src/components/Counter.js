@@ -5,7 +5,7 @@ import {
 	decrementCount,
 	resetCount,
 	evenCount,
-	incrementByCount,
+	inputCounter,
 } from "../actions/counterActions";
 
 const Counter = () => {
@@ -14,11 +14,8 @@ const Counter = () => {
 
 	const onDecrement = useSelector((state) => state.decrementCount);
 	const onIncrement = useSelector((state) => state.incrementCount);
-	const onInput = useSelector((state) => state.incrementByCount);
-
-	const even = count % 2 === 0 ? onEven : count;
-
-	const onEven = useSelector((state) => state.evenCount);
+	
+	
 
 	return (
 		<div>
@@ -27,11 +24,11 @@ const Counter = () => {
 				<button onClick={() => dispatch(incrementCount())}>+</button>
 				<button onClick={() => dispatch(decrementCount())}>-</button>
 				<button onClick={() => dispatch(resetCount())}>reset</button>
-
-				<button onClick={() => dispatch(onEven())}>+ if even</button>
+				<button onClick={() => dispatch(evenCount())}>+ if even</button>
 				<input
-					onChange={({ target }) => dispatch(incrementByCount(target.value))}
+					onChange={({target}) => dispatch(inputCounter((Number(target.value))))}
 					value={count}
+          type= "number"
 				/>
 			</p>
 		</div>
