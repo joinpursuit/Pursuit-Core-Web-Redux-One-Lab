@@ -1,4 +1,4 @@
-import { DECREMENT, INCREMENT,  } from "./actionTypes";
+import { DECREMENT, INCREMENT, RESET } from "./actionTypes";
 
 export const decrementCount = () => {
   return { type: DECREMENT };
@@ -7,3 +7,7 @@ export const decrementCount = () => {
 export const incrementCount = () => {
   return { type: INCREMENT };
 };
+
+export const resetCount = () => {
+  return { type: RESET }
+}
